@@ -5,4 +5,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [IndexController::class, 'index']);
 Route::get('/hello', [IndexController::class, 'show']);
+Route::resource('listing', \App\Http\Controllers\ListingController::class)->only(['index','show']);
 
